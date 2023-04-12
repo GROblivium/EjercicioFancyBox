@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+        <link rel="stylesheet"	href="/fancybox/jquery.fancybox-1.3.4.css"	type="text/css"	media="screen"/>
+        <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+              
+        <title>Ejercicio individual N°6</title>
+		
+	</head>
+	<body body class="container bg-secondary bg-opacity-25">
+		<main class="container">
+            <div class="row">
+            <div class="col-12">
+                <h3 class="text-center bg-secondary bg-opacity-25 col-12">Tratamiento de imagenes Fancybox</h3>
+                <hr>
+            </div>
+            <div>
+        <div class="row">
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+                <a data-fancybox="gallery" id="tigre" href="images/tiger-jpg.jpg" data-caption="Tigre de bengala">
+                <img class="img-fluid img-thumbnail" src="images/tiger-jpg.jpg" alt="tigre" style="height: 200px; width: 300;" /></a>
+            </div>
+            <div class="col-3">
+                <a data-fancybox="gallery" id="panda" href="images/panda.jpg" data-caption="Panda">
+                <img class="img-fluid img-thumbnail" src="images/panda.jpg" alt="panda" style="height: 200px; width: 300;" /></a>
+            </div>
+            <div class="col-3">
+                
+            </div>
+        </div>
+
+        <hr>
+        <div class="col-12">
+            <h3 class="text-center bg-secondary bg-opacity-25 col-12">Trailer de películas</h3>
+        </div>
+        <div>
+    <div class="row">
+        <div class="col-3">
+
+        </div>
+        <div class="col-3">
+            <a data-fancybox="gallery" id="nilo" href="http://i3.ytimg.com/vi/dZRqB0JLizw/hqdefault.jpg" data-caption="Muerte en el Nilo">
+            <img class="img-fluid img-thumbnail" src="http://i3.ytimg.com/vi/dZRqB0JLizw/hqdefault.jpg" alt="nilo" style="height: 200px; width: 300;" /></a>
+        </div>
+        <div class="col-1">
+            <button id="open_video" class="bg-secondary bg-opacity-25 col-12">
+                Ver trailer
+              </button>
+        </div>
+        <div class="col-5">
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-center bg-secondary bg-opacity-25 col-12">Rio Tinto</h3>
+            <hr>
+        </div>
+        <div>
+
+    <div class="row">
+        
+        <div class="col-3">
+
+        </div>
+        <div class="col-3">
+            <a data-fancybox="gallery" id="maps" href="images/maps.jpeg" data-caption="Google Maps">
+            <img class="img-fluid img-thumbnail" src="images/maps.jpeg" alt="maps" style="height: 200px; width: 300;" /></a>
+        </div>
+        
+        
+        <div class="col-6">
+          
+
+            <a href="https://www.google.com/maps/@-33.3479047,-71.346923,17z" data-fancybox>             
+            Abrir mapa.
+            </a>    
+        
+        </div>
+
+     
+
+        <div class="col-6">
+           
+        </div>
+    </div>
+
+
+   
+
+		</main>
+		<script
+			type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" ></script>
+		<script
+			type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+		<script	type="text/javascript"	src="/fancybox/jquery.easing-1.3.pack.js"></script>
+		<script	type="text/javascript" src="/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+		
+        <script>
+			$(document).ready(function () 
+            {
+				
+				$('a#tigre').fancybox({
+					overlayShow: true,
+					transitionIn: 'eslastic',
+					transitionOut: 'elastic',
+				});
+                $('a#panda').fancybox({
+					overlayShow: true,
+					transitionIn: 'eslastic',
+					transitionOut: 'elastic',
+				});
+                $('a#nilo').fancybox({
+					overlayShow: true,
+					transitionIn: 'eslastic',
+					transitionOut: 'elastic',
+				});
+                $('a#maps').fancybox({
+					overlayShow: true,
+					transitionIn: 'eslastic',
+					transitionOut: 'elastic',
+				});
+
+
+                document.getElementById("open_video").addEventListener("click", () => {
+                Fancybox.show([
+               
+                {
+                src: "https://www.youtube.com/watch?v=dZRqB0JLizw",
+                thumb: "http://i3.ytimg.com/vi/dZRqB0JLizw/hqdefault.jpg",
+                },
+              
+                ]);
+                });  
+
+      
+
+			});
+
+
+          
+            Fancybox.bind('[data-fancybox]', {
+            
+      });    
+    
+            
+		</script>
+	</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+		crossorigin="anonymous"></script>
+</html>
